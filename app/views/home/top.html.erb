@@ -1,4 +1,10 @@
-<h1>Home#top</h1>
-<p>Find me in app/views/home/top.html.erb</p>
-
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset2 col-md-8 well">
+            <%= form_tag("/home/scrape",{method: :post}) do %>
+                <input type="text" name="url">
+                <input type="submit" value="送信">
+            <%end%>
+        </div>
+    </div>
+</div>
