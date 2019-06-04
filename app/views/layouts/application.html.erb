@@ -10,6 +10,41 @@
   </head>
 
   <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample4">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            Smart-List
+          </a>
+        </div>
+        
+        <div class="collapse navbar-collapse navbar-right" id="navbarEexample4">
+          <ul class="nav navbar-nav">
+            <li><%=link_to("/home/top") do %>SUUMO<%end%></li>
+            <li><%=link_to("/home/empty") do %>カーセンサー<%end%></li>
+            <li><%=link_to("/home/empty") do %>indeed<%end%></li>
+          </ul>
+          <button type="button" class="btn btn-default navbar-btn">ログイン</button>
+          <button type="button" class="btn btn-default navbar-btn">新規登録</button>
+        </div>
+      </div>
+    </nav>
+
+
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name %> text-center">
+        <a class="close" data-dismiss="alert">×</a>
+        <%= msg %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

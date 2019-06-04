@@ -59,3 +59,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #↓追記↓
 gem 'jquery-rails'
 gem 'bootstrap-sass'
+
+gem 'delayed_job'
+gem 'delayed_job_active_record'
+gem 'daemons'

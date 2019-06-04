@@ -1,10 +1,97 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-offset2 col-md-8 well">
-            <%= form_tag("/home/scrape",{method: :post}) do %>
-                <input type="text" name="url">
+        <div class="col-md-offset-1 col-md-10 well">
+            <h1>SUUMO<span class="small"> 一戸建て.ver</span></h1>
+            <%= form_tag("/home/scrape") do %>
+                <h3>都道府県を選択してください</h3>
+                <select name="url">
+                    <option value="#">選択してください</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=010&bs=020&ta=01&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">北海道</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=020&bs=020&ta=02&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">青森</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=020&bs=020&ta=03&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">岩手</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=020&bs=020&ta=04&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">宮城</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=020&bs=020&ta=05&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">秋田</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=020&bs=020&ta=06&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">山形</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=020&bs=020&ta=07&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">福島</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=020&bs=020&ta=08&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">茨城</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=030&bs=020&ta=09&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">栃木</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=030&bs=020&ta=10&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">群馬</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=030&bs=020&ta=11&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">埼玉</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=030&bs=020&ta=12&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">千葉</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=030&bs=020&ta=13&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">東京</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=030&bs=020&ta=14&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">神奈川</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=040&bs=020&ta=15&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">新潟</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=040&bs=020&ta=16&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">富山</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=040&bs=020&ta=17&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">石川</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=040&bs=020&ta=18&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">福井</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=040&bs=020&ta=19&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">山梨</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=040&bs=020&ta=20&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">長野</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=050&bs=020&ta=21&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">岐阜</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=050&bs=020&ta=22&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">静岡</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=050&bs=020&ta=23&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">愛知</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=050&bs=020&ta=24&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">三重</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=060&bs=020&ta=25&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">滋賀</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=060&bs=020&ta=26&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">京都</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=060&bs=020&ta=27&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">大阪</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=060&bs=020&ta=28&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">兵庫</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=060&bs=020&ta=29&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">奈良</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=060&bs=020&ta=30&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">和歌山</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=080&bs=020&ta=31&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">鳥取</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=080&bs=020&ta=32&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">島根</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=080&bs=020&ta=33&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">岡山</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=080&bs=020&ta=34&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">広島</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=080&bs=020&ta=35&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">山口</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=070&bs=020&ta=36&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">徳島</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=070&bs=020&ta=37&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">香川</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=070&bs=020&ta=38&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">愛媛</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=070&bs=020&ta=39&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">高知</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=090&bs=020&ta=40&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">福岡</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=090&bs=020&ta=41&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">佐賀</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=090&bs=020&ta=42&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">長崎</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=090&bs=020&ta=43&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">熊本</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=090&bs=020&ta=44&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">大分</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=090&bs=020&ta=45&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">宮崎</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=090&bs=020&ta=46&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">鹿児島</option>
+                    <option value="https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=090&bs=020&ta=47&jspIdFlg=patternShikugun&kb=1&kt=9999999&km=1&tb=0&tt=9999999&hb=0&ht=9999999&ekTjCd=&ekTjNm=&tj=0&kw=1&srch_navi=1">沖縄</option>
+                </select>
                 <input type="submit" value="送信">
             <%end%>
+            <%= button_to("中止", {controller: 'home', action: 'job_destroy'}, {method: :post, class:"btn btn-default"}) %>
+            <br>
+            <br>
+            
+            <h3>[現在格納中の店舗または企業]</h3>
+
+            <span class="btn-group" roule="group">
+                <%= button_to("一括削除", {controller: 'home', action: 'all_destroy'}, {method: :post, class:"btn btn-default"}) %>
+                <%= link_to "csv出力",home_top_path(format: :csv),{method: :get, class:"btn btn-default"} %>
+            </span>
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tr>
+                        <td>No.</td>
+                        <td>名前</td>
+                        <td>電話番号</td>
+                        <td>備考</td>
+                        <td>HP</td>
+                    </tr>
+                    <% @shops.each do |shop| %>
+                        <tr>
+                            <td><%= shop.id %></td>
+                            <td><%= shop.name %></td>
+                            <td><%= shop.phone_number %></td>
+                            <td><%= shop.address %></td>
+                            <td>
+                                <%shop.links.each do |link|%>
+                                    <%= link_to(link.url,link.url) %>
+                                    <br>
+                                <%end%>
+                            </td>
+                        </tr>
+                    <%end%>
+                </table>
+            </div>
         </div>
     </div>
 </div>
